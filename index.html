@@ -14,6 +14,21 @@
       </div>
       <button class="addanswer">Add</button>
     </div>
+    <div class="resultsfield"></div>
     <button>Share!</button>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+    $(function() {
+      $('.resultsfield').hide()
+
+      var adding_answer = function() {
+        $('.inputs').append('<input></input>')
+      }
+
+      $('.addanswer').click(adding_answer)
+    })
+    </script>
   </body>
 </html>
