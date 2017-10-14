@@ -14,19 +14,30 @@
       <button class="addanswer">Add</button>
     </div>
     <div class="resultsfield"></div>
-    <button>Share!</button>
-
+    <button class="submit">Share!</button>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script>
     $(function() {
       $('.resultsfield').hide()
 
-      var adding_answer = function() {
+      var add_option = function() {
         $('.inputs').append('<input></input>')
       }
+      $('.addanswer').click(add_option)
 
-      $('.addanswer').click(adding_answer)
+      var options = []
+      var submit = function() {
+        $('.inputfield').hide()
+        $('.resultsfield').css('display','flex')
+        $('input').each(function() {
+          options.push($(this).val())
+        })
+        var winner = options[Math.floor(Math.random() * options.length)]
+        console.log(winner)
+        $('.resultsfield').text(winner)
+      }
+      $('.submit').click(submit)
     })
     </script>
   </body>

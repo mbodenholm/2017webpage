@@ -32,3 +32,12 @@ input{
 .addanswer {
   margin-top: 10px;
 }
+
+.resultsfield {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  font-size: 15px;
+  align-items: center;
+
+}
